@@ -48,9 +48,9 @@ files = [f for f in glob.glob("**/*.jpg", recursive=True)]
 
 for f in files:
     if counter % augmentation_percentage == 0:
-        function_to_apply = random.randint(0, 3)
+        function_to_apply = random.randint(0, 2)
         if function_to_apply == 0:
-            if random.randint(0, 2) == 0:
+            if random.randint(0, 1) == 0:
                 rotate_image(f, random.randint(10, 76))
             else:
                 rotate_image(f, -random.randint(10, 76))
